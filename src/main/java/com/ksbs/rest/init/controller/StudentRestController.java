@@ -75,6 +75,7 @@ public class StudentRestController {
 		
 		StudentStatusModal studentStatus = new StudentStatusModal();
 		Student student = studentService.getStudent(studentId);
+		
 		StudentModal studentModal = new StudentModal();
 		if(student!=null){
 			studentStatus.setStatus(200);
