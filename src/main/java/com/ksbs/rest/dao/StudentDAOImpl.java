@@ -23,7 +23,7 @@ public class StudentDAOImpl implements StudentDAO {
 	@SuppressWarnings("unchecked")
 	@Transactional(readOnly=true)
 	public List<Student> getAllStudents() {
-		 List<Student> studentList = entityManager.createQuery("SELECT s from Student s").getResultList();
+		 List<Student> studentList = entityManager.createQuery("SELECT s from Student s ORDER BY s.marks DESC, s.roll_no ASC ").getResultList();
 		 return studentList;
 	}
 
